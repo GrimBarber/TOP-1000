@@ -1,110 +1,110 @@
-//$(window).scroll(function() {
-//
-//	var scrollPos = $(window).scrollTop();
-//	
-//	if ($(".section-menu").length) {
-//	
-//		if ($(window).height() > $(".section-menu").height() + 72) {
-//			if (scrollPos > $(".sidebar").offset().top - 50) {
-//			
-//				if (scrollPos - $(".sidebar").offset().top + $(".section-menu").height() < $(".inner-content").height() - 50) {
-//					mTop = 50
-//				} else {
-//					mTop = $(".inner-content").offset().top + $(".inner-content").height() - $(".section-menu").height() - scrollPos - 30
-//				}
-//				$(".section-menu").addClass("section-menu-floating").css({
-//					top: mTop
-//				});
-//			} else {
-//				$(".section-menu").removeClass("section-menu-floating");
-//			}
-//		} else {
-//			$(".section-menu").removeClass("section-menu-floating");
-//		}
-//		
-//	}
-//	
-//	if ($(".news-filter").length) {
-//		if (scrollPos > $(".news-filter").parent().offset().top - 60 && scrollPos < $(".inner-content").offset().top + $(".inner-content").height() - 200) {
-//			
-//			$(".news-filter").addClass("news-filter-fixed");
-//			
-//		} else {
-//			$(".news-filter").removeClass("news-filter-fixed");
-//		}
-//	}
-//	
-//	if (scrollPos > 200) {
-//		$(".header").addClass("header-fixed");
-//		$(".body").css({
-//			marginTop: 212
-//		})
-//	} else {
-//		$(".header").removeClass("header-fixed");
-//		$(".body").css({
-//			marginTop: 0
-//		})
-//	}
-//  
-//	if ($(".stats-slider").length) {
-//	
-//		if (scrollPos + $(window).height() > $(".stats-slider").offset().top + 300 && !$(".stats-slider").hasClass("anim-done")) {
-//			
-//			$(".stats-slider").addClass("anim-done");
-//			
-//			$(".stats-slider .slide").each(function() {
-//
-//				var item = $(this);
-//			
-//				var t = setTimeout(function() {
-//					TweenMax.to(item,.25,
-//						{
-//							y: 0,
-//							opacity: 1
-//						}
-//					);
-//				},$(this).prevAll(".slide").length*260)
-//			})
-//			
-//		}
-//	
-//	}
-//	
-//	if ($(".calendar-slider").length) {
-//	
-//		if (scrollPos + $(window).height() > $(".calendar-slider").offset().top + 300 && !$(".calendar-slider").hasClass("anim-done")) {
-//			
-//			$(".calendar-slider").addClass("anim-done");
-//			
-//			$(".calendar-slider .slide").each(function() {
-//
-//				var item = $(this);
-//			
-//				var t = setTimeout(function() {
-//					TweenMax.to(item,.25,
-//						{
-//							y: 0,
-//							opacity: 1
-//						}
-//					);
-//				},$(this).nextAll(".slide").length*260)
-//			})
-//			
-//		}
-//		
-//	}
-//	
-//});
-//
-//$(window).resize(function() {
-//  pupMakeup();
-//})
-//
-//
-//$(window).load(function() {
-//	
-//	
-//});
+$(window).scroll(function() {
+
+	var scrollPos = $(window).scrollTop();
+	
+	if ($(".section-menu").length) {
+	
+		if ($(window).height() > $(".section-menu").height() + 72) {
+			if (scrollPos > $(".sidebar").offset().top - 50) {
+			
+				if (scrollPos - $(".sidebar").offset().top + $(".section-menu").height() < $(".inner-content").height() - 50) {
+					mTop = 50
+				} else {
+					mTop = $(".inner-content").offset().top + $(".inner-content").height() - $(".section-menu").height() - scrollPos - 30
+				}
+				$(".section-menu").addClass("section-menu-floating").css({
+					top: mTop
+				});
+			} else {
+				$(".section-menu").removeClass("section-menu-floating");
+			}
+		} else {
+			$(".section-menu").removeClass("section-menu-floating");
+		}
+		
+	}
+	
+	if ($(".news-filter").length) {
+		if (scrollPos > $(".news-filter").parent().offset().top - 60 && scrollPos < $(".inner-content").offset().top + $(".inner-content").height() - 200) {
+			
+			$(".news-filter").addClass("news-filter-fixed");
+			
+		} else {
+			$(".news-filter").removeClass("news-filter-fixed");
+		}
+	}
+	
+	if (scrollPos > 200) {
+		$(".header").addClass("header-fixed");
+		$(".body").css({
+			marginTop: 212
+		});
+	} else {
+		$(".header").removeClass("header-fixed");
+		$(".body").css({
+			marginTop: 0
+		})
+	}
+  
+	if ($(".stats-slider").length) {
+	
+		if (scrollPos + $(window).height() > $(".stats-slider").offset().top + 300 && !$(".stats-slider").hasClass("anim-done")) {
+			
+			$(".stats-slider").addClass("anim-done");
+			
+			$(".stats-slider .slide").each(function() {
+
+				var item = $(this);
+			
+				var t = setTimeout(function() {
+					TweenMax.to(item,.25,
+						{
+							y: 0,
+							opacity: 1
+						}
+					);
+				},$(this).prevAll(".slide").length*260)
+			})
+			
+		}
+	
+	}
+	
+	if ($(".calendar-slider").length) {
+	
+		if (scrollPos + $(window).height() > $(".calendar-slider").offset().top + 300 && !$(".calendar-slider").hasClass("anim-done")) {
+			
+			$(".calendar-slider").addClass("anim-done");
+			
+			$(".calendar-slider .slide").each(function() {
+
+				var item = $(this);
+			
+				var t = setTimeout(function() {
+					TweenMax.to(item,.25,
+						{
+							y: 0,
+							opacity: 1
+						}
+					);
+				},$(this).nextAll(".slide").length*260)
+			})
+			
+		}
+		
+	}
+	
+});
+
+$(window).resize(function() {
+  pupMakeup();
+})
+
+
+$(window).load(function() {
+	
+	
+});
 
 
 $(document).ready(function() {
@@ -937,7 +937,7 @@ function initContactsMap() {
 	}, {
 		// Опции.
 		// Своё изображение иконки метки.
-		iconImageHref: '/images/map-pin.png',
+		iconImageHref: 'images/map-pin.png',
 		// Размеры метки.
 		iconImageSize: [60, 66],
 		// Смещение левого верхнего угла иконки относительно
