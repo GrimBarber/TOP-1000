@@ -16,11 +16,11 @@ $(window).scroll(function() {
 					top: mTop
 				});
 			} else {
-				$(".section-menu").removeClass("section-menu-floating");
+				$(".section-menu").removeClass("section-menu-floating").css({
+					top: 0
+				});
 			}
-		} else {
-			$(".section-menu").removeClass("section-menu-floating");
-		}
+		} 
 		
 	}
 	
@@ -36,11 +36,14 @@ $(window).scroll(function() {
 	
 	if (scrollPos > 200) {
 		$(".header").addClass("header-fixed");
+		$(".header .center-wrapper").css("display","none");
+		$(".main-menu-wrapper .center-wrapper").css("display","block");
 		$(".body").css({
 			marginTop: 212
 		});
 	} else {
 		$(".header").removeClass("header-fixed");
+		$(".header .center-wrapper").css("display","block");
 		$(".body").css({
 			marginTop: 0
 		})
@@ -142,6 +145,11 @@ $(document).ready(function() {
 
 	$(".fancybox").fancybox();
 	
+	$(".member-logo").click(function() {
+		$(".member-logo").not($(this)).find(".hidden-member-description").stop().fadeOut(400);
+		$(this).find(".hidden-member-description").fadeToggle(400);
+	
+	})
 	// Календарь
 	
 	$("body").on("click",".calendar-more-link",function() {

@@ -90,6 +90,7 @@ a:hover {
 .more-link:hover,
 .header-email a:hover {
 	background:none;
+	text-decoration:none;
 }
 
 .home-block a {
@@ -2187,8 +2188,9 @@ a:hover .news-badge div {
 }
 
 .news-item-med:hover .ttl .ttl-text {
-  color:#155596;
-	background:url(../images/link-ul.png) 0 26px repeat-x;
+/*  color:#155596;*/
+/*	background:url(../images/link-ul.png) 0 26px repeat-x;*/
+		color: #b99867
 }
 
 .news-item-med .date {
@@ -2256,8 +2258,12 @@ a:hover .news-badge div {
 }
 
 .news-item-small:hover .ttl .ttl-text {
+/*
   color:#155596;
 	background:url(../images/link-ul.png) 0 19px repeat-x;
+	
+*/
+	color: #b99867
 }
 
 .news-item-small .date {
@@ -2701,7 +2707,6 @@ a:hover .news-badge div {
 	padding:9px;
 	margin:0 0 33px 0;
 	text-align: center;
-	border: 1px solid #473d2e;
 	
 }
 
@@ -2857,6 +2862,10 @@ a:hover .news-badge div {
 }
 
 .text + .pub-info:before {
+	display: none;
+}
+
+.ttl + .pub-info:before {
 	display: none;
 }
 
@@ -4094,10 +4103,16 @@ a:hover .pub-more {
 	font-weight: normal;
 }
 
+.modern-page-begin:hover,
 .modern-page-navigation .modern-page-previous:hover,
-.modern-page-navigation .modern-page-next:hover {
-	color:#155596;
+.modern-page-navigation .modern-page-next:hover,
+.modern-page-navigation .modern-page-end:hover {
+	color: #FE9D0E;
 	background:url(../images/link-ul-hover.png) 0 bottom repeat-x;
+}
+
+.article-nav a:hover {
+	color:#FE9D0E;
 }
 
 .modern-page-navigation .modern-page-previous {
@@ -4168,6 +4183,8 @@ a:hover .pub-more {
   filter: none; /* Applies to FF + IE */
 	-webkit-filter: grayscale(0);
 }
+
+
 
 .news-filter {
   font-size: 13px;
@@ -4472,6 +4489,13 @@ a:hover .pub-more {
 	width:193px;
 	padding:0 40px 0 0;
 	text-align: center;
+	display: block;
+	text-decoration: none;
+	
+}
+
+.persons-list-item:hover .post {
+	color: #FE9D0E;
 }
 
 .persons-list-item:last-child {
@@ -4518,6 +4542,7 @@ a:hover .pub-more {
 	color: #b99867;
 	font-style: italic;
 	font-weight: normal;
+	transition: color 0.4s ease;
 }
 
 .persons-captions {
@@ -6514,5 +6539,14 @@ display: none;
 	margin: 0 -186px;
 	padding: 0 186px;
 	background: #ffffff;
+}
+
+.reversal {
+	left: -507px;
+}
+
+.reversal .black-angle {
+	transform: rotate(226deg);
+	left: 481px;
 }
 
